@@ -30,13 +30,13 @@ hbs.registerHelper('message', (text) => {
 //     next();
 // });
 
-app.use((request, response, next) => {
-     response.render('Message.hbs', {
-        title: 'Site is under maintenance',
-        year: new Date().getFullYear(),
-        message: 'This site is curerntly under maintenance'
-    });
-});
+// app.use((request, response, next) => {
+//      response.render('Message.hbs', {
+//         title: 'Site is under maintenance',
+//         year: new Date().getFullYear(),
+//         message: 'This site is curerntly under maintenance'
+//     });
+// });
 
 app.get('/', (request, response) => {
     response.render("Message.hbs", {

@@ -3,6 +3,9 @@ const hbs = require('hbs');
 const request = require("request");
 var app = express();
 
+const port = process.env.PORT || 9000;
+
+
 hbs.registerPartials(__dirname + "/views/partials")
 
 app.set('view engine', 'hbs');
@@ -138,6 +141,6 @@ app.get('/weather', (request, response) => {
 })
 
 
-app.listen(9000, () => {
-    console.log('Server is up on the port 9000')
+app.listen(port, () => {
+    console.log('Server is up on the port ${port}')
 })

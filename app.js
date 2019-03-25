@@ -39,15 +39,12 @@ hbs.registerHelper('message', (text) => {
 // });
 
 app.get('/', (request, response) => {
-    response.render("Message.hbs", {
-        name: 'Your Name',
-        school: [
-        'BCIT',
-        'SFU',
-        'UBC'
-        ]
-    })
-})
+    response.render('home.hbs', {
+        title: 'Home page',
+        year: new Date().getFullYear(),
+        welcome: 'Hello'
+    });
+});
 
 app.get('/info', (request, response) => {
     response.render('info.hbs', {
